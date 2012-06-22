@@ -1,0 +1,13 @@
+# m h  dom mon dow   command
+self_ip='https://server.128.ip.255'
+auth_p='definedinauth.php'
+# TODO pipe these to logs
+# get any daily tasks:
+1 1 * * * curl -k "$self_ip/job/createFromTemplate/schedule/daily/auth/$auth_p" &> /dev/null
+# weekly, monthly:
+2 1 * * 0 curl -k "$self_ip/job/createFromTemplate/schedule/weekly/auth/$auth_p" &> /dev/null
+3 1 1 * * curl -k "$self_ip/job/createFromTemplate/schedule/monthly/auth/$auth_p" &> /dev/null
+# launch N slaves for the day:
+4 1 * * * curl -k "$self_ip/slaves/launchSlaves/auth/$auth_p" &> /dev/null
+# monitor for slave deletion and job relaunching:
+*/5 * * * * curl -k "$self_ip/slaves/watchdog/auth/$auth_p" &> /dev/null

@@ -1,0 +1,31 @@
+PHP files you may wish to change:
+
+app/config/auth.php
+app/config/main.php
+app/components/AmazonWS.php
+app/views/layouts/main.php
+
+In case of a necessary migration, the following is a list of dependencies:
+
+PHP >= 5.2 with MySQL support, PDO support, Amazon's Web Services support
+--( http://pear.amazonwebservices.com/ )
+MySQL >= 5.0.51a
+curl
+Apache2
+--With mod_rewrite, mod_curl, mod_ssl
+
+Specific Yii dependencies can be viewed by downloading the yii framework
+separately and viewing the requirements/index.php page. With curl and PDO
+it should be fine.
+
+Server-side should uncomment the https lines in html/.htaccess and
+change the public IPs in the crontab. Important passwords and other
+credentials should be stored in app/config/auth.php.
+
+Helpful links for setting up Apache and SSL with Amazon's particular flavor
+of Linux:
+http://www.akadia.com/services/ssh_test_certificate.html
+http://jonathanhui.com/building-ec2-amazon-linux-lamp
+With Amazon's Ubuntu:
+https://help.ubuntu.com/community/ApacheMySQLPHP
+http://www.linode.com/wiki/index.php/Apache2_SSL_in_Ubuntu

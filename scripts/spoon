@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /opt/elastic/kettle/data-integration
+echo $1
+#set KETTLE_HOME="/opt/elastic/elasticfolder/data/$1"
+export KETTLE_HOME="/opt/elastic/elasticfolder/data/$1"
+./spoon.sh &
