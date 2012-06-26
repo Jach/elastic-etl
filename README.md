@@ -20,7 +20,7 @@ check the status of slave servers, and more.
 # Documentation
 
 Setting up the Master Server documentation can be found in
-[Install-Document][Install-Document].
+[Install-Document](wiki/Install-Document).
 
 Make sure you load the DDL found in elastic_jobs_datamodel.ddl to the
 database you set up.
