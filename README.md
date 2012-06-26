@@ -20,12 +20,12 @@ check the status of slave servers, and more.
 # Documentation
 
 Setting up the Master Server documentation can be found in
-[Install-Document](wiki/Install-Document).
+[Install-Document](elastic-etl/wiki/Install-Document).
 
 Make sure you load the DDL found in elastic_jobs_datamodel.ddl to the
 database you set up.
 
-General documentation can be found in `documentation.pdf`. Important sections
+General documentation can be found in [Old Documentation](elastic-etl/wiki/Old-Documentation). Important sections
 are "Generating new models" on page 3, "Security" on page 4
 (specifically "Passwords"), and the non-obsolete
 "Master Configuration Settings" on page 6.
